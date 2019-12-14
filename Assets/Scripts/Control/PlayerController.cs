@@ -29,6 +29,7 @@ namespace RPG.Control
 
                 if (Input.GetMouseButtonDown(0))
                 {
+                    Debug.Log("I should be attacking!");
                     GetComponent<Fighter>().Attack(target);
                 }
                 return true;
