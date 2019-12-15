@@ -1,14 +1,19 @@
 using System;
 using UnityEngine;
 
-namespace RPG.Combat
+namespace RPG.Core
 {
     public class Health : MonoBehaviour
     {
         [SerializeField] float maxHealth = 100.0f;
         [SerializeField] float health;
 
-        public bool isAlive = true;
+        bool isAlive = true;
+
+        public bool IsDead()
+        {
+            return (!isAlive);
+        }
 
         private void Start() 
         {
@@ -26,8 +31,11 @@ namespace RPG.Combat
 
         private void Die()
         {
+            if (!isAlive) return;
+
             GetComponent<Animator>().SetTrigger("die");
             isAlive = false;
+            GetComponent<ActionScheduler>().CancelCurrentAction();
 
         }
     }

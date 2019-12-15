@@ -11,9 +11,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
-  m_Height: 1
+  m_Height: 2
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.93, z: 0}
 --- !u!114 &7732493831547798130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26,7 +26,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a28fd99bcb3b1ba45bb05455c2389174, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isAlive: 1
+--- !u!114 &5250607770216306296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5242641192957352258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8862f63c41bd14458d1465da32feee9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chaseDistance: 5
 --- !u!1001 &2745988455366529586
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38,6 +50,11 @@ PrefabInstance:
         type: 3}
       propertyPath: maxHealth
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3500170699326747882, guid: eebb43bfb10545c4898cf4e0f2ceec8f,
+        type: 3}
+      propertyPath: m_Speed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5858650995471865461, guid: eebb43bfb10545c4898cf4e0f2ceec8f,
         type: 3}
