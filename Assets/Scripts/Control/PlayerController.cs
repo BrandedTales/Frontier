@@ -18,6 +18,7 @@ namespace RPG.Control
         private void Update()
         {
             if (health.IsDead()) return;
+            
             if (InteractWithCombat()) return;
             if (InteractWithMovement()) return;
 
@@ -35,7 +36,7 @@ namespace RPG.Control
                 if (target == null) continue;
                 if (!GetComponent<Fighter>().CanAttack(target.gameObject)) continue;
 
-                if (Input.GetMouseButtonDown(0))
+                if (Input.GetMouseButton(0))
                 {
                     Debug.Log("I should be attacking!");
                     GetComponent<Fighter>().Attack(target.gameObject);
